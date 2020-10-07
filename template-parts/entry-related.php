@@ -30,7 +30,7 @@
                 if (has_post_thumbnail()) {
                     the_post_thumbnail('related');
                 } else {
-                    echo '<div class="entry-related__noImg"></div>';
+                    echo '<img src="'. esc_url(get_template_directory_uri()) . '/img/related-no_image.png" alt="">';
                 }
                 ?>
                 </div>
@@ -39,5 +39,6 @@
         </article>
     <?php endforeach; wp_reset_postdata(); ?>
     </div><!-- entry-related__items -->
+
 </section>
 <?php endif; ?><!-- if $myposts のendifだよ。has_categoryのでは無い事に注意 -->
