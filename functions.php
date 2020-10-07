@@ -2,8 +2,7 @@
 /* WordPress標準機能 */
 function my_setup() {
     add_theme_support('post-thumbnails'); /* アイキャッチ */
-    set_post_thumbnail_size( 200, 200, true ); /* アイキャッチ画像のサイズ */
-    add_image_size( 200, 200, true );
+    add_image_size( 'related', 650, 450, true );
     add_theme_support('automatic-feed-links'); /* RSSフィード */
     add_theme_support('title-tag'); /* タイトルタグ自動生成 */
     add_theme_support('html5', array( /* HTML5のタグで出力 */

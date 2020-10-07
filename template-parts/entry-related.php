@@ -28,7 +28,7 @@
                 <div class="entry-related__img">
                 <?php
                 if (has_post_thumbnail()) {
-                    the_post_thumbnail('medium');
+                    the_post_thumbnail('related');
                 } else {
                     echo '<div class="entry-related__noImg"></div>';
                 }
