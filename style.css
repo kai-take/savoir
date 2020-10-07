@@ -20,7 +20,25 @@ body.active {
 .error-text {
     font-size: 2.5rem;
 }
-
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline-offset: -2px;
+}
 /*---------------------------------
 ヘッダー
 ---------------------------------*/
@@ -173,11 +191,12 @@ body.active {
     position: relative;
     margin-top: 15px;
 }
-.month-archive > select {
+.month-archive > select, .category-archive > select {
     width: 100%;
     padding: 6px 14px; 
     border-radius: 40px; /* 角丸の指定 */
     background: #fefeff;
+    font-size: 1.4rem;
 }
 .month-archive::before { /* optionやselectには擬似要素は使用できない */
     font-family: "Font Awesome 5 Free";
@@ -197,12 +216,6 @@ body.active {
     position: relative;
     margin-top: 40px;
 }
-.category-archive > select {
-    width: 100%;
-    padding: 6px 14px; 
-    border-radius: 40px; /* 角丸の指定 */
-    background: #fefeff;
-}
 .category-archive::before { /* optionやselectには擬似要素は使用できない */
     font-family: "Font Awesome 5 Free";
     content: "\f0d7";
@@ -214,10 +227,9 @@ body.active {
     font-size: 2rem;
     font-weight: 900;
 }
-
 .header-container {
-        transform: translateX(0%);
-        transition: none;
+    transform: translateX(0%);
+    transition: none;
 }
 /*
 ヘッダー幅変更
@@ -1594,6 +1606,7 @@ sp
     width: 70%;
     padding: 10px;
     background: #f1eded;
+    font-size: 1.6rem;
 }
 .cf7-items {
     display: -webkit-box;
@@ -1648,6 +1661,7 @@ sp
     background-color: #43ab92;
     color: #f3f3f3;
     border-radius: 3px;
+    font-size: 1.4rem;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
 }
@@ -1709,6 +1723,10 @@ sp
     }
     .cf7-items dd {
         margin-left: 0;
+    }
+    .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+        width:100%;
+        min-width: auto;
     }
 }
 /*---------------------------------
@@ -1789,5 +1807,6 @@ sp
 }
 .profile figure > img {
     width: 100%;
+    height: auto;
     max-height: 400px;
 }
