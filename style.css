@@ -39,6 +39,10 @@ input[type="submit"]:focus,
 input[type="button"]:focus {
   outline-offset: -2px;
 }
+/* IEでのデフォルトスタイルをリセット */
+select::-ms-expand {
+    display: none;
+}
 /*---------------------------------
 ヘッダー
 ---------------------------------*/
@@ -49,12 +53,19 @@ input[type="button"]:focus {
     z-index: 20;
     width: 200px; /* ブレイクポイント設置 */
     height: 100%;
-    padding: 50px 20px;
+    padding: 50px 20px 80px 20px;
     background: #43ab92;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
 }
+.header::-webkit-scrollbar{
+    display:none;
+  }
 .close-btn {
     display: none; /* レイアウト変更に伴い,blockにする */
+    cursor: pointer;
 }
 .logo {
     width: 70%;
@@ -100,6 +111,9 @@ input[type="button"]:focus {
     width: 20px;
     margin-right: 3px;
     border-top: 1px solid #fefeff;
+}
+.header-container {
+    padding-bottom: 60px;
 }
 .header__nav {
     border-top: 3px dashed #fefeff;
@@ -196,7 +210,7 @@ input[type="button"]:focus {
     padding: 6px 14px; 
     border-radius: 40px; /* 角丸の指定 */
     background: #fefeff;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 .month-archive::before { /* optionやselectには擬似要素は使用できない */
     font-family: "Font Awesome 5 Free";
@@ -324,6 +338,7 @@ input[type="button"]:focus {
     /* ハンバーガーボタン */
     .mobile-menu__btn {
         display: block;
+        cursor: pointer;
     }
     .mobile-menu__btn > span {
         display: block;
@@ -1607,6 +1622,7 @@ sp
     padding: 10px;
     background: #f1eded;
     font-size: 1.6rem;
+    overflow: auto;
 }
 .cf7-items {
     display: -webkit-box;
