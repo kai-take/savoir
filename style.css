@@ -301,6 +301,8 @@ select::-ms-expand {
         position: relative;
         left: 210px;
         top: -30px;
+        width: 30px;
+        height: 28px;
     }
     .close-btn > span {
         display: block;
@@ -1825,4 +1827,12 @@ sp
     width: 100%;
     height: auto;
     max-height: 400px;
+}
+
+
+.price_wrap .boc {
+    width: 61.7%;
+}
+.center {
+    width: 91%;
 }
