@@ -56,14 +56,6 @@
             <?php
             $prev_post = get_previous_post(false);
             $next_post = get_next_post(false); 
-            function console_log( $data ){
-            echo '<script>';
-            echo 'console.log('. json_encode( $data ) .')';
-            echo '</script>';
-            }
-
-            console_log(($prev_post));
-            console_log(($next_post));
             ?>
         
             <!-- 一つずつ変数がセットされているか確認しながら進める。テスト環境でエラーが出なくても、本番環境でエラーが出る事がある -->
