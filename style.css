@@ -7,7 +7,9 @@ Author: Kaito Takeuchi
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
-/* 初期設定 */
+/*---------------------------------
+初期設定
+---------------------------------*/
 body {
     -ms-overflow-style: none;
 }
@@ -63,7 +65,7 @@ select::-ms-expand {
     -ms-overflow-style: none;
     scrollbar-width: none;  
 }
-.header::-webkit-scrollbar{
+.header::-webkit-scrollbar {
     display:none;
   }
 .close-btn {
